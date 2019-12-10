@@ -2,6 +2,7 @@ const express = require('express');
 const places = require('./routes/places');
 const db = require('./models/database');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express(); 
 const port = 4200;
@@ -13,7 +14,7 @@ dbconnect.once('open', ()=>{
     console.log('it is connected to the matrix');
 });
 
-
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
