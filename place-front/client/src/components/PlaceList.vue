@@ -5,8 +5,8 @@
       <li class="media">
         
         <div class="media-body">
-          <h4 class="mt-0 mb-1">{{place.name}}</h4>
-          <h5 class="mt-0 mb-1">{{place.visited}}</h5>
+          <h4 class="mt-0 mb-1">Place: {{place.name}}</h4>
+          <h5 class="mt-0 mb-1">Did you visited? {{place.visited ? 'Yes, Loved it!':'No, so sad!'}}</h5>
           <br />
          
         </div>
@@ -40,5 +40,9 @@ export default {
 </script>
 
 <style scoped>
+  
+  li {
+      list-style: none;
+  }
 
 </style>
